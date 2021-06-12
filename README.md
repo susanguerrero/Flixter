@@ -28,10 +28,8 @@ Estimated time spent: 7 hours spent in total
 ### Walkthrough Video
 
 <iframe 
-src="www.loom.com/share/d6dd300593fa465585a96ca55e44efa5" frameborder="0" 
-webkitallowfullscreen mozallowfullscreen allowfullscreen 
-style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
+www.loom.com/share/d6dd300593fa465585a96ca55e44efa5 
+
 
 ### Reflection
 

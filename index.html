@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flixter</title>
+  </head>
+  <body>
+   <!--Main Heading (title, logo, search bar) -->
+    <div class="header">
+    <img src="https://cdn4.iconfinder.com/data/icons/planner-color/64/popcorn-movie-time-512.png" class= logo alt="Icon of popcorn and tickets">
+    <h1>FLIXTER
+   
+      <div class="searchBar">
+        <form id="search-form">
+          <input
+            id="search-input"
+            name="search"
+            placeholder="Search For Movies"
+          />
+        </form>
+    </h1>
+
+  <!-- Heading, Posters, Load More -->
+  </div>
+  <hr />
+    <h2>Now Playing</h2>
+
+    <div class="moviePosters"></div>
+
+    <div>
+      <button id="show-more-btn" type="button" class="search-btn hidden">
+        Load More Movies
+      </button>
+    </div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>

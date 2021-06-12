@@ -27,7 +27,6 @@ Estimated time spent: 7 hours spent in total
 
 ### Walkthrough Video
 
-<iframe 
 www.loom.com/share/d6dd300593fa465585a96ca55e44efa5 
 
 

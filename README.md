@@ -1,4 +1,3 @@
-# Flixter
 
 ## Week 1 Assignment: Flixster
 

@@ -14,6 +14,13 @@ const searchInput = document.querySelector("#search-input");
 const posterArea = document.querySelector(".moviePosters");
 const showMoreBtn = document.querySelector("#show-more-btn");
 
+// const searchForm = document.getElementById('search-form');
+
+const searchSection = document.getElementById('search-section');
+
+const searchMovieSection = document.getElementById('movie-section');
+
+
 // get search results from API 
 window.onload = getResults;
 
@@ -22,9 +29,9 @@ async function getResults() {
     `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
   );
   let jsonResponse = await response.json();
-  let responseData = jsonResponse.results;
+  let movieResponse = jsonResponse.results;
 
-  responseData.forEach((el) => displayResults(el));
+  movieResponse.forEach((element) => displayResults(element));
 }
 //display the results from API
 function displayResults(movieData) {
@@ -39,19 +46,18 @@ function displayResults(movieData) {
 </div>`;
 }
 
+
 //Show Me More Button 
 async function loadMore(element){
   
     currentApiPage++;
     let apiURL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1` + currentApiPage;
 
-    currentApiPage++;
-
     let response = await fetch(apiURL);
-    let responseData = await response.json();
-    let data = responseData.results;    
+    let movieResponse = await response.json();
+    let data = movieResponse.results;    
 
-    let movies = responseData.results.map(element => ({
+    let movies = movieResponse.results.map(element => ({
         id: element.id,
         title: element.title,
         poster_path: element.poster_path,
@@ -67,4 +73,31 @@ currentApiPage++;
 
 showMoreBtn.addEventListener('click', loadMore);
 
+
+//search function
+async function submitSearchForm(event) {
+
+  currentApiPage ++;
+  posterArea.innerHTML = "";
+
+  event.preventDefault();
+
+  currentSearchTerm = searchInput.value;
+  const results = await searchResults(currentSearchTerm);
+
+}
+async function searchResults(searchTerm) {
+  currentApiPage = 1;
+  currentSearchTerm = searchTerm;
+  
+  let response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${currentSearchTerm}&page=${currentApiPage}`
+  );
+  let jsonResponse = await response.json();
+  let movieResponse = jsonResponse.results;
+
+  movieResponse.forEach((element) => displayResults(element));
+}
+
+searchForm.addEventListener("submit", submitSearchForm);
 

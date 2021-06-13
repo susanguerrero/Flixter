@@ -1,9 +1,10 @@
+# Flixter
 
 ## Week 1 Assignment: Flixster
 
 Submitted by: Susan Guerrero
 
-Estimated time spent: 7 hours spent in total
+Estimated time spent: 9 hours spent in total
 
 ### Application Features
 
@@ -12,7 +13,7 @@ Estimated time spent: 7 hours spent in total
 - [x] User can view a list of current movies from The Movie Database API as a grid view.
 - [x] For each movie displayed, user can see the following details: `Title`, `Poster Image`, `Votes`.
 - [x] User can load more current movies by clicking a button at the bottom of the list. The page should not refresh; movies should simply be added to the bottom.
-- [ ] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
+- [x] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
 - [x] Website accounts for basic HTML/CSS accessibility features.
 - [x] Website should be responsive.
 
@@ -26,8 +27,7 @@ Estimated time spent: 7 hours spent in total
 
 ### Walkthrough Video
 
-www.loom.com/share/d6dd300593fa465585a96ca55e44efa5 
-
+https://www.loom.com/share/746a8372e9124363937873185bb4b4f7
 
 ### Reflection
 
